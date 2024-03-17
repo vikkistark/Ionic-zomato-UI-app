@@ -1,0 +1,56 @@
+p {
+  font-family: Lato;
+}
+ion-tab-button.active {
+  border-bottom: 2px solid rgb(255, 40, 47); /* Adjust color and thickness as needed */
+}
+::ng-deep .scroll-content::-webkit-scrollbar {
+  display: none;
+}
+ion-tab-button {
+  --ripple-color: transparent; /* Set ripple color to transparent */
+  --width: 10px;
+}
+ion-tab-bar:hover,
+ion-tab-button :hover {
+  color: red !important;
+}
+ion-header {
+  --ion-background-color: transparent; /* Set background color to transparent */
+  --border-style: none; /* Set border style to none */
+  --box-shadow: none !important; /* Remove box-shadow */
+}
+
+/* ion-content {
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+} */
+@media (max-width: 385px) {
+  .list-section {
+    height: 54vh !important;
+  }
+}
+@media (max-width: 440px) {
+  .list-section {
+    height: 65vh !important;
+  }
+}
+
+@media (max-width: 940px) {
+  .list-section {
+    height: 70vh!important;
+  }
+}
+@media (max-width: 1100px) {
+  .list-section {
+    height:76vh!important;
+  }
+}
+
+.list-section {
+  height:80vh
+}

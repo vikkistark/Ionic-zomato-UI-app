@@ -1,0 +1,37 @@
+.pb-4 {
+  padding-bottom: 4px;
+}
+.pb-6 {
+  padding-bottom: 6px;
+}
+.pb-8 {
+  padding-bottom: 8px;
+}
+.pb-12 {
+  padding-bottom: 12px;
+}
+
+.dashed-border-bottom {
+  border-bottom: 1px dashed #c3c5c763;
+}
+.dashed-border-top {
+  border-top: 1px dashed #c3c5c7;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+.flex-center-gap-6 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.search-filter-section{
+  display:flex;
+  align-items:center
+  ;position:fixed;
+  top:280px;
+  z-index:10;
+  background:white;
+  width:100%
+}

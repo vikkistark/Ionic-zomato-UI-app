@@ -1,0 +1,130 @@
+<ion-content>
+  <ion-row size="12" class="search-filter-section">
+    <ion-col size="10">
+      <ion-searchbar
+        placeholder="Search for restaurants, dishes ..."
+        mode="ios"
+        (ionChange)="onSearch($event)"
+      ></ion-searchbar>
+    </ion-col>
+    <ion-col size="2">
+      <button style="background: #00000012;padding: 10px;border-radius: 9px;">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="#42b447"
+            d="M22 18.605a.75.75 0 0 1-.75.75h-5.1a2.93 2.93 0 0 1-5.66 0H2.75a.75.75 0 1 1 0-1.5h7.74a2.93 2.93 0 0 1 5.66 0h5.1a.75.75 0 0 1 .75.75m0-13.21a.75.75 0 0 1-.75.75H18.8a2.93 2.93 0 0 1-5.66 0H2.75a.75.75 0 1 1 0-1.5h10.39a2.93 2.93 0 0 1 5.66 0h2.45a.74.74 0 0 1 .75.75m0 6.6a.74.74 0 0 1-.75.75H9.55a2.93 2.93 0 0 1-5.66 0H2.75a.75.75 0 1 1 0-1.5h1.14a2.93 2.93 0 0 1 5.66 0h11.7a.75.75 0 0 1 .75.75"
+          />
+        </svg>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <div style="margin-top:60px">
+    <ion-grid style="overflow-y:auto;border-bottom:1px solid #c3c5c7">
+      <ion-row>
+        <ion-col style="padding:4px"
+          size="12"
+          size-sm="12"
+          size-md="12"
+          size-lg="6"
+          size-xl="3"
+          *ngFor="let list of list"
+        >
+        <ion-card style="
+        margin: 0px;
+        box-sizing: border-box;
+    ">
+          <ion-row>
+            <ion-col size="6">
+              <img [src]="list.img" style="border-radius:6px" />
+            </ion-col>
+            <ion-col size="6">
+              <ion-row class="pb-4" style="font-size:18px;font-weight:600">{{
+                list.name
+              }}</ion-row>
+              <ion-row
+                class="pb-12 dashed-border-bottom"
+                style="font-size:14px;color:#6f6e77"
+                ><span>{{ list.subName }}</span></ion-row
+              >
+              <ion-row class="pb-8" class="flex-center-gap-6">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ddc08b"
+                      d="M11.25 7.847c-.936.256-1.5.975-1.5 1.653s.564 1.397 1.5 1.652zm1.5 5.001v3.304c.936-.255 1.5-.974 1.5-1.652c0-.678-.564-1.397-1.5-1.652"
+                    />
+                    <path
+                      fill="#ddc08b"
+                      fill-rule="evenodd"
+                      d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10M12 5.25a.75.75 0 0 1 .75.75v.317c1.63.292 3 1.517 3 3.183a.75.75 0 0 1-1.5 0c0-.678-.564-1.397-1.5-1.653v3.47c1.63.292 3 1.517 3 3.183s-1.37 2.891-3 3.183V18a.75.75 0 0 1-1.5 0v-.317c-1.63-.292-3-1.517-3-3.183a.75.75 0 0 1 1.5 0c0 .678.564 1.397 1.5 1.652v-3.469c-1.63-.292-3-1.517-3-3.183s1.37-2.891 3-3.183V6a.75.75 0 0 1 .75-.75"
+                      clip-rule="evenodd"
+                    /></svg
+                ></span>
+                <span>{{ list.rate }}</span></ion-row
+              >
+              <ion-row class="pb-4" class="">
+                <ion-col
+                  size="6"
+                  style="margin-left:-4px"
+                  class="flex-center-gap-6"
+                >
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#f5b0ad"
+                        d="M14.19 14.19L6 18l3.81-8.19L18 6m-6-4A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 8.9a1.1 1.1 0 0 0-1.1 1.1a1.1 1.1 0 0 0 1.1 1.1a1.1 1.1 0 0 0 1.1-1.1a1.1 1.1 0 0 0-1.1-1.1"
+                      /></svg
+                  ></span>
+                  <span>{{ list.liveTracking }}</span>
+                </ion-col>
+                <ion-col size="6" class="flex-center-gap-6">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 48 48"
+                    >
+                      <g fill="#9dd9d9">
+                        <path
+                          d="M29.004 13.674L25 12.97l.346-1.97l4.136.727A3.498 3.498 0 0 1 32.5 10h3.885c.34 0 .615.275.615.615v5.77c0 .34-.276.615-.615.615H32.5a3.5 3.5 0 0 1-3.496-3.326"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          d="M30.805 18.563L29.875 26H23v-1.28c0-.398-.378-.72-.844-.72h-8.07C8.516 24 4 27.85 4 32.6c0 .22.21.4.47.4h4.552a5.5 5.5 0 0 0 10.956 0h.91c.038 0 .075 0 .112-.002V33h10.366c.202.68.783 1.115 1.418 1.25a5.5 5.5 0 0 0 10.703-2.137c.445-.464.669-1.145.395-1.882A6.501 6.501 0 0 0 35 26.628V19h-2.5a3.484 3.484 0 0 1-1.695-.437M16.95 33h-4.9a2.5 2.5 0 0 0 4.9 0m18.944.848a2.501 2.501 0 0 0 4.546-.801z"
+                          clip-rule="evenodd"
+                        />
+                        <path
+                          d="M9.17 20a3.003 3.003 0 0 1 .063-.162M9.17 20c-.11.313-.17.65-.17 1v1h15v-1c0-.337-.055-.66-.158-.962L23.83 20A3.001 3.001 0 0 0 21 18h-9a3 3 0 0 0-2.764 1.832"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                  <span>{{ list.deliveryTime }}</span>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-app></ion-app>
